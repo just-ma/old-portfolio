@@ -3,7 +3,7 @@ import { FILE_TYPE } from "../constants";
 import resume_pic from "../assets/files/Justin_Ma.svg";
 import resume_pdf from "../assets/files/Justin_Ma.pdf";
 
-const me_photo = require("../assets/pictures/me.jpg");
+import me_photo from "../assets/pictures/me.jpg";
 
 const ME = [
   {

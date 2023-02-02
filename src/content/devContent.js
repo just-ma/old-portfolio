@@ -1,14 +1,14 @@
 import React from "react";
 import { FILE_TYPE } from "../constants";
 
-const desktopsim_pic = require("../assets/pictures/dev/desktopsim.gif");
-const virtualrooms_pic = require("../assets/pictures/dev/virtualrooms.gif");
-const bruinhub_pic = require("../assets/pictures/dev/bruinhub.gif");
-const snackapp_pic = require("../assets/pictures/dev/snackapp.gif");
-const realitysim_pic = require("../assets/pictures/dev/realitysim.gif");
-const color_pic = require("../assets/pictures/dev/color.gif");
-const spaceexp_pic = require("../assets/pictures/dev/spaceexp.gif");
-const pavve_pic = require("../assets/pictures/dev/pavve.gif");
+import desktopsim_pic from "../assets/pictures/dev/desktopsim.gif";
+import virtualrooms_pic from "../assets/pictures/dev/virtualrooms.gif";
+import bruinhub_pic from "../assets/pictures/dev/bruinhub.gif";
+import snackapp_pic from "../assets/pictures/dev/snackapp.gif";
+import realitysim_pic from "../assets/pictures/dev/realitysim.gif";
+import color_pic from "../assets/pictures/dev/color.gif";
+import spaceexp_pic from "../assets/pictures/dev/spaceexp.gif";
+import pavve_pic from "../assets/pictures/dev/pavve.gif";
 
 const DEV = [
   {

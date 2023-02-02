@@ -1,9 +1,9 @@
 import React from "react";
 import { FILE_TYPE } from "../constants";
 
-const china1_t = require("../assets/pictures/movies/china1_t.jpg");
-const china2_t = require("../assets/pictures/movies/china2_t.jpg");
-const elevator_t = require("../assets/pictures/movies/elevator_t.jpg");
+import china1_t from "../assets/pictures/movies/china1_t.jpg";
+import china2_t from "../assets/pictures/movies/china2_t.jpg";
+import elevator_t from "../assets/pictures/movies/elevator_t.jpg";
 
 const MOVIES = [
   {
@@ -15,13 +15,14 @@ const MOVIES = [
     source: china1_t,
     content: (
       <iframe
+        title="china 2018 part 1"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/KCSq4Pk3ftk"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-    )
+    ),
   },
   {
     id: "movies_china2",
@@ -32,13 +33,14 @@ const MOVIES = [
     source: china2_t,
     content: (
       <iframe
+        title="china 2018 part 2"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/IzTYggOUDX8"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-    )
+    ),
   },
   {
     id: "movies_elevator",
@@ -49,13 +51,14 @@ const MOVIES = [
     source: elevator_t,
     content: (
       <iframe
+        title="elevator man"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/_xIH3a9L2Fs"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-    )
+    ),
   },
 ];
 

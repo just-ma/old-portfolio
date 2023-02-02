@@ -12,6 +12,20 @@ import cate_le_bon_file from "../assets/songs/cate_le_bon.mp3";
 import spoon_file from "../assets/songs/spoon.mp3";
 import alabama_shakes_file from "../assets/songs/alabama_shakes.mp3";
 
+import radiohead_album from "../assets/pictures/spotify/radiohead.jpg";
+import sza_album from "../assets/pictures/spotify/sza.jpg";
+import jpegmafia_album from "../assets/pictures/spotify/jpegmafia.jpg";
+import gorillaz_album from "../assets/pictures/spotify/gorillaz.jpg";
+import kero_kero_bonito_album from "../assets/pictures/spotify/kero_kero_bonito.jpg";
+import injury_reserve_album from "../assets/pictures/spotify/injury_reserve.jpg";
+import kanye_west_album from "../assets/pictures/spotify/kanye_west.jpg";
+import steve_lacy_album from "../assets/pictures/spotify/steve_lacy.jpg";
+import tyler_the_creator_album from "../assets/pictures/spotify/tyler_the_creator.jpg";
+import blood_orange_album from "../assets/pictures/spotify/blood_orange.jpg";
+import cate_le_bon_album from "../assets/pictures/spotify/cate_le_bon.jpg";
+import spoon_album from "../assets/pictures/spotify/spoon.jpg";
+import alabama_shakes_album from "../assets/pictures/spotify/alabama_shakes.jpg";
+
 const radiohead_audio = new Audio(radiohead_file);
 const sza_audio = new Audio(sza_file);
 const jpegmafia_audio = new Audio(jpegmafia_file);
@@ -25,20 +39,6 @@ const blood_orange_audio = new Audio(blood_orange_file);
 const cate_le_bon_audio = new Audio(cate_le_bon_file);
 const spoon_audio = new Audio(spoon_file);
 const alabama_shakes_audio = new Audio(alabama_shakes_file);
-
-const radiohead_album = require("../assets/pictures/spotify/radiohead.jpg");
-const sza_album = require("../assets/pictures/spotify/sza.jpg");
-const jpegmafia_album = require("../assets/pictures/spotify/jpegmafia.jpg");
-const gorillaz_album = require("../assets/pictures/spotify/gorillaz.jpg");
-const kero_kero_bonito_album = require("../assets/pictures/spotify/kero_kero_bonito.jpg");
-const injury_reserve_album = require("../assets/pictures/spotify/injury_reserve.jpg");
-const kanye_west_album = require("../assets/pictures/spotify/kanye_west.jpg");
-const steve_lacy_album = require("../assets/pictures/spotify/steve_lacy.jpg");
-const tyler_the_creator_album = require("../assets/pictures/spotify/tyler_the_creator.jpg");
-const blood_orange_album = require("../assets/pictures/spotify/blood_orange.jpg");
-const cate_le_bon_album = require("../assets/pictures/spotify/cate_le_bon.jpg");
-const spoon_album = require("../assets/pictures/spotify/spoon.jpg");
-const alabama_shakes_album = require("../assets/pictures/spotify/alabama_shakes.jpg");
 
 const SPOTIFY = [
   {
