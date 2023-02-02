@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "./Icon";
 import "./Icon.scss";
 
-const iconContainer = props => {
+const IconContainer = (props) => {
   const { direction, icons, loading } = props;
 
   const getStyle = () => {
@@ -13,11 +13,11 @@ const iconContainer = props => {
 
   return (
     <div className="iconWrapper" style={getStyle()}>
-      {icons.map(icon => (
+      {icons.map((icon) => (
         <Icon key={icon.id} {...icon} loading={loading} />
       ))}
     </div>
   );
 };
 
-export default iconContainer;
+export default IconContainer;

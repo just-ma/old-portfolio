@@ -14,41 +14,42 @@ const ME = [
     type: FILE_TYPE.TEXT,
     content: (
       <div className={FILE_TYPE.TEXT}>
-        <p>
-          <b>Programming and design</b> are my two favorite things, which has worked
-          out nicely since many of my projects require a good bit of both.
-        </p>
-        <p>While code builds functionality, art allows creativity.</p>
-        <p>
-          These two interests have driven me into frontend development, where
-          both skills are relevant.
-        </p>
-        <p>
-          I'm currently a 4th year student studying Computer Science at UCLA.
-        </p>
-        <br/>
+        <p>{"Fun links :)"}</p>
+        <br />
         <p>
           <a href={resume_pdf} download>
             Resume
           </a>
         </p>
         <p>
-          <a href="https://www.linkedin.com/in/justinma98/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/justinma98/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </p>
         <p>
-          <a href="https://github.com/justinma98" target="_blank">
+          <a
+            href="https://github.com/just-ma"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
         </p>
         <p>
-          <a href="https://www.instagram.com/_justma/" target="_blank">
+          <a
+            href="https://www.instagram.com/_justma/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Instagram
           </a>
         </p>
       </div>
-    )
+    ),
   },
   {
     id: "me_resume",
@@ -62,7 +63,7 @@ const ME = [
         <img className={FILE_TYPE.PDF} alt="resume" src={resume_pic} />
         <a className="downloadIcon" href={resume_pdf} download />
       </div>
-    )
+    ),
   },
   {
     id: "me_photo",
@@ -71,8 +72,8 @@ const ME = [
     title: "me.jpg",
     type: FILE_TYPE.PICTURE,
     source: me_photo,
-    content: <img className={FILE_TYPE.PICTURE} alt="me" src={me_photo} />
-  }
+    content: <img className={FILE_TYPE.PICTURE} alt="me" src={me_photo} />,
+  },
 ];
 
 export default ME;

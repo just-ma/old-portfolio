@@ -21,7 +21,7 @@ const DESKTOP = [
     pos: { x: -200, y: 160 },
     title: "About Me",
     type: FILE_TYPE.COMPUTER,
-    content: <IconContainer direction="row" icons={ME} />
+    content: <IconContainer direction="row" icons={ME} />,
   },
   {
     id: "desktop_dev",
@@ -37,7 +37,7 @@ const DESKTOP = [
           <InfoCard key={i} {...e} />
         ))}
       </div>
-    )
+    ),
   },
   {
     id: "desktop_design",
@@ -45,7 +45,7 @@ const DESKTOP = [
     pos: { x: -370, y: 270 },
     title: "Graphic Design",
     type: FILE_TYPE.FOLDER,
-    content: <IconContainer direction="row" icons={DESIGN} />
+    content: <IconContainer direction="row" icons={DESIGN} />,
   },
   {
     id: "desktop_photos",
@@ -53,7 +53,7 @@ const DESKTOP = [
     pos: { x: -290, y: 240 },
     title: "Photography",
     type: FILE_TYPE.FOLDER,
-    content: <IconContainer direction="row" icons={PHOTOS} />
+    content: <IconContainer direction="row" icons={PHOTOS} />,
   },
   {
     id: "desktop_art",
@@ -61,7 +61,7 @@ const DESKTOP = [
     pos: { x: -270, y: 180 },
     title: "Art",
     type: FILE_TYPE.FOLDER,
-    content: <IconContainer direction="row" icons={ART} />
+    content: <IconContainer direction="row" icons={ART} />,
   },
   {
     id: "desktop_movies",
@@ -69,7 +69,7 @@ const DESKTOP = [
     pos: { x: 0, y: 240 },
     title: "Movies",
     type: FILE_TYPE.FOLDER,
-    content: <IconContainer direction="row" icons={MOVIES} />
+    content: <IconContainer direction="row" icons={MOVIES} />,
   },
   {
     id: "desktop_spotify",
@@ -77,7 +77,7 @@ const DESKTOP = [
     pos: { x: -190, y: 70 },
     title: "Spotify",
     type: FILE_TYPE.SPOTIFY,
-    content: <Spotify playlist={SPOTIFY}/>
+    content: <Spotify playlist={SPOTIFY} />,
   },
   {
     id: "desktop_readme",
@@ -92,10 +92,16 @@ const DESKTOP = [
           delay={1400}
           phrase="My name's Justin Ma               and this is a portfolio of my creative       and coding work."
         />
-        <Typer delay={5100} phrase="Click around to explore:)" />
+        <Typer delay={5500} phrase="Click around to explore:)" />
+        <div style={{ fontSize: 11 }}>
+          <Typer
+            delay={7500}
+            phrase="P.S.           I made this in 2019 so this code is                    🙈                     but the links and resume are up to date!"
+          />
+        </div>
       </TyperContainer>
-    )
-  }
+    ),
+  },
 ];
 
 export default DESKTOP;

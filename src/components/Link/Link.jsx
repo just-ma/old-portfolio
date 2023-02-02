@@ -4,7 +4,7 @@ import "./Link.scss";
 import { selectWindow } from "../../utils";
 import Window from "../Window/Window";
 
-const link = props => {
+const Link = (props) => {
   const [windowDOM, setWindowDOM] = useState(null);
   const [windowOpen, setWindowOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const link = props => {
 
   let { id } = props;
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.stopPropagation();
     openWindow();
   };
@@ -33,7 +33,7 @@ const link = props => {
 
   return (
     <div onClick={handleClick}>
-      <div className="link"/>
+      <div className="link" />
       {windowDOM
         ? ReactDOM.createPortal(
             <Window {...props} close={closeWindow} open={windowOpen} />,
@@ -44,4 +44,4 @@ const link = props => {
   );
 };
 
-export default link;
+export default Link;

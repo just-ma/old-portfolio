@@ -3,12 +3,12 @@ import SpotifyToolBar from "./SpotifyToolBar";
 import SpotifyListItem from "./SpotifyListItem";
 import "./Spotify.scss";
 
-const spotify = props => {
+const Spotify = (props) => {
   const [songNum, setSongNum] = useState(0);
 
   let { playlist } = props;
 
-  const handleSongChange = index => {
+  const handleSongChange = (index) => {
     if (index === songNum || index < 0 || index >= playlist.length) return;
     setSongNum(index);
   };
@@ -44,4 +44,4 @@ const spotify = props => {
   );
 };
 
-export default spotify;
+export default Spotify;

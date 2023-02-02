@@ -1,7 +1,7 @@
 import React from "react";
 import "./Spotify.scss";
 
-const spotifyListItem = props => {
+const SpotifyListItem = (props) => {
   let { title, artist, isPlaying, index, onClick } = props;
   return (
     <div
@@ -14,4 +14,4 @@ const spotifyListItem = props => {
   );
 };
 
-export default spotifyListItem;
+export default SpotifyListItem;

@@ -5,7 +5,6 @@ const desktopsim_pic = require("../assets/pictures/dev/desktopsim.gif");
 const virtualrooms_pic = require("../assets/pictures/dev/virtualrooms.gif");
 const bruinhub_pic = require("../assets/pictures/dev/bruinhub.gif");
 const snackapp_pic = require("../assets/pictures/dev/snackapp.gif");
-const datesim_pic = require("../assets/pictures/dev/datesim.gif");
 const realitysim_pic = require("../assets/pictures/dev/realitysim.gif");
 const color_pic = require("../assets/pictures/dev/color.gif");
 const spaceexp_pic = require("../assets/pictures/dev/spaceexp.gif");
@@ -25,7 +24,7 @@ const DEV = [
         </p>
       </div>
     ),
-    github: "https://github.com/justinma98/portfolio"
+    github: "https://github.com/justinma98/portfolio",
   },
   {
     id: "dev_vr",
@@ -34,6 +33,7 @@ const DEV = [
     type: FILE_TYPE.VIDEO,
     content: (
       <iframe
+        title="virtual rooms"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/d1zuhlXSpjo"
         frameBorder="0"
@@ -56,7 +56,7 @@ const DEV = [
           repositioning, and removing furniture.
         </p>
       </div>
-    )
+    ),
   },
   {
     title: "BruinHub",
@@ -71,7 +71,7 @@ const DEV = [
         </p>
       </div>
     ),
-    github: "https://github.com/ucladevx/Aphrodite"
+    github: "https://github.com/ucladevx/Aphrodite",
   },
   {
     src: snackapp_pic,
@@ -87,7 +87,7 @@ const DEV = [
         </p>
       </div>
     ),
-    github: "https://github.com/justinma98/snackapp"
+    github: "https://github.com/justinma98/snackapp",
   },
   {
     id: "dev_realsim",
@@ -96,6 +96,7 @@ const DEV = [
     type: FILE_TYPE.VIDEO,
     content: (
       <iframe
+        title="reality simulator"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/9zxBU82pECw"
         frameBorder="0"
@@ -115,7 +116,7 @@ const DEV = [
         </p>
         <p>Built in Unity. Designed and developed VR environmnt.</p>
       </div>
-    )
+    ),
   },
   {
     id: "dev_spaceexp",
@@ -124,6 +125,7 @@ const DEV = [
     type: FILE_TYPE.VIDEO,
     content: (
       <iframe
+        title="space expiration"
         className={FILE_TYPE.VIDEO}
         src="https://www.youtube.com/embed/lgOhS3oxDA8"
         frameBorder="0"
@@ -146,7 +148,7 @@ const DEV = [
           attack algorithm based on multiple data points.
         </p>
       </div>
-    )
+    ),
   },
   {
     src: color_pic,
@@ -165,21 +167,7 @@ const DEV = [
         </p>
       </div>
     ),
-    github: "https://github.com/UCLA-Creative-Labs/color"
-  },
-  {
-    src: datesim_pic,
-    title: "Dating Sim",
-    description: (
-      <div>
-        <p>A 30 minute dating simulator game.</p>
-        <p>
-          Built in React. Created a tree data structure that stores scene
-          information for the player to traverse. Implemented a speed typing
-          mini game which records the user's words per minute.
-        </p>
-      </div>
-    )
+    github: "https://github.com/UCLA-Creative-Labs/color",
   },
   {
     src: pavve_pic,
@@ -194,8 +182,8 @@ const DEV = [
         <p>Built in React.</p>
       </div>
     ),
-    github: "https://github.com/justinma98/pavve"
-  }
+    github: "https://github.com/justinma98/pavve",
+  },
 ];
 
 export default DEV;

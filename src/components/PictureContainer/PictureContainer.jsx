@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import "./PictureContainer.scss";
 
-const pictureContainer = props => {
+const PictureContainer = (props) => {
   const [pos, setPos] = useState(0);
   let { pictures } = props;
   const length = pictures.length;
 
-  const hasPic = position => {
+  const hasPic = (position) => {
     if (position < 0 || position > length - 1) return false;
     return true;
   };
 
-  const movePos = offset => {
+  const movePos = (offset) => {
     let newPos = pos + offset;
     if (newPos < 0 || newPos > length - 1) return;
     setPos(newPos);
   };
 
-  const renderRow = dir => {
+  const renderRow = (dir) => {
     let row;
     let offset;
     switch (dir) {
@@ -76,4 +76,4 @@ const pictureContainer = props => {
   );
 };
 
-export default pictureContainer;
+export default PictureContainer;

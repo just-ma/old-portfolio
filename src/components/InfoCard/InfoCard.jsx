@@ -3,7 +3,7 @@ import Link from "../Link/Link";
 import "./InfoCard.scss";
 import "../Link/Link.scss";
 
-const iconContainer = props => {
+const InfoCard = (props) => {
   const { title, description, src, link, github } = props;
 
   let linkCmpt;
@@ -45,6 +45,6 @@ const iconContainer = props => {
   );
 };
 
-iconContainer.defaultProps = { link: null, github: null };
+InfoCard.defaultProps = { link: null, github: null };
 
-export default iconContainer;
+export default InfoCard;

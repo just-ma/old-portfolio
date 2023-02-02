@@ -3,8 +3,8 @@ import "./Window.scss";
 import { selectWindow, windowComplete } from "../../utils";
 import { WINDOW } from "../../constants";
 
-const window = props => {
-  const [size, setSize] = useState(props.size);
+const Window = (props) => {
+  const [size, setSize] = useState(props.size || { x: 500, y: 300 });
   const [pos, setPos] = useState(props.pos);
   const [ease, setEase] = useState("all 0.3s ease-out");
   const [zIndex, setZIndex] = useState(0);
@@ -35,15 +35,15 @@ const window = props => {
     document.addEventListener("mouseup", onMouseUp);
   };
 
-  const onMouseMove = e => {
+  const onMouseMove = (e) => {
     isDrag
       ? setPos({
           x: offset.x + e.clientX,
-          y: Math.max(offset.y + e.clientY, 0)
+          y: Math.max(offset.y + e.clientY, 0),
         })
       : setSize({
           x: Math.max(offset.x + e.clientX, WINDOW.MIN_WIDTH),
-          y: Math.max(offset.y + e.clientY, WINDOW.MIN_HEIGHT)
+          y: Math.max(offset.y + e.clientY, WINDOW.MIN_HEIGHT),
         });
   };
 
@@ -62,10 +62,10 @@ const window = props => {
       : title;
   };
 
-  const scaleWindow = maximize => {
+  const scaleWindow = (maximize) => {
     setSize({
       x: maximize ? WINDOW.MAX_WIDTH : WINDOW.MIN_WIDTH,
-      y: maximize ? WINDOW.MAX_HEIGHT : WINDOW.MIN_HEIGHT
+      y: maximize ? WINDOW.MAX_HEIGHT : WINDOW.MIN_HEIGHT,
     });
   };
 
@@ -84,7 +84,7 @@ const window = props => {
 
   const openWindow = () => {
     setOpacity(1);
-    setSize(props.size);
+    setSize(props.size || { x: 500, y: 300 });
     setPos(props.pos);
     setTimeout(openWindowHelper, 280);
   };
@@ -93,7 +93,7 @@ const window = props => {
     setEase("all 0.5s ease");
   };
 
-  const mySelectWindow = e => {
+  const mySelectWindow = (e) => {
     e.stopPropagation();
     setZIndex(selectWindow(zIndex));
   };
@@ -107,10 +107,10 @@ const window = props => {
         left: pos.x,
         top: pos.y,
         zIndex: zIndex,
-        opacity: opacity
+        opacity: opacity,
       }}
     >
-      <div className="window__header" onMouseDown={e => onMouseDown(e, true)}>
+      <div className="window__header" onMouseDown={(e) => onMouseDown(e, true)}>
         <span>{renderTitle()}</span>
         <div className="window__button -exit" onClick={closeWindow} />
         <div
@@ -127,7 +127,7 @@ const window = props => {
         style={{
           transition: ease,
           width: size.x,
-          height: size.y
+          height: size.y,
         }}
       >
         {React.cloneElement(content, { open: open, loading: props.loading })}
@@ -136,7 +136,7 @@ const window = props => {
             <div className="window__scaleIcon" />
             <div
               className="window__scaleArea"
-              onMouseDown={e => onMouseDown(e, false)}
+              onMouseDown={(e) => onMouseDown(e, false)}
             />
           </div>
         ) : null}
@@ -145,6 +145,4 @@ const window = props => {
   );
 };
 
-window.defaultProps = { size: { x: 500, y: 300 } };
-
-export default window;
+export default Window;

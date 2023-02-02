@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Typer.scss";
 
-const typer = props => {
+const Typer = (props) => {
   let [pos, setPos] = useState(0);
   let { phrase, speed, delay } = props;
 
@@ -18,6 +18,6 @@ const typer = props => {
   return <p className="typer">{phrase.slice(0, pos)}</p>;
 };
 
-export default typer;
+export default Typer;
 
-typer.defaultProps = { speed: 28, delay: 0 };
+Typer.defaultProps = { speed: 28, delay: 0 };

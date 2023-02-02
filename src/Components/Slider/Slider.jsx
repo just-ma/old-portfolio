@@ -1,27 +1,27 @@
 import React, { useState, useRef } from "react";
 import "./Slider.scss";
 
-const slider = props => {
+const Slider = (props) => {
   const [mouseDown, setMouseDown] = useState(false);
   const sliderRef = useRef(null);
 
   let { percent, onChange } = props;
 
-  const updateSlider = pos => {
+  const updateSlider = (pos) => {
     let rect = sliderRef.current.getBoundingClientRect();
     let knobPos = Math.max(rect.left, Math.min(rect.right, pos));
     let knobPercent = (100 * (knobPos - rect.left)) / (rect.right - rect.left);
     onChange(knobPercent);
   };
 
-  const handleMouseDown = e => {
+  const handleMouseDown = (e) => {
     setMouseDown(true);
     document.addEventListener("mouseup", handleMouseUp);
     document.addEventListener("mousemove", handleMouseMove);
     updateSlider(e.clientX);
   };
 
-  const handleMouseMove = e => {
+  const handleMouseMove = (e) => {
     updateSlider(e.clientX);
   };
 
@@ -46,4 +46,4 @@ const slider = props => {
   );
 };
 
-export default slider;
+export default Slider;

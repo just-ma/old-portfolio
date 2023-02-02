@@ -3,12 +3,12 @@ import "./Loading.scss";
 import { NUM_WINDOWS } from "../../constants";
 import { getNumWindows } from "../../utils";
 
-const loading = props => {
+const Loading = (props) => {
   const [percent, setPercent] = useState(0);
   const [loading, setLoading] = useState(true);
   const [opacity, setOpacity] = useState(1);
 
-  let {loadingDone} = props;
+  let { loadingDone } = props;
   let realInterval;
   let fakePercent = 0;
 
@@ -44,4 +44,4 @@ const loading = props => {
   ) : null;
 };
 
-export default loading;
+export default Loading;

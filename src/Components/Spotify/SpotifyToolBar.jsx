@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "../Slider/Slider";
 import "./Spotify.scss";
 
-const spotifyToolBar = props => {
+const SpotifyToolBar = (props) => {
   const [songTime, setSongTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playInterval, setPlayInterval] = useState(undefined);
@@ -41,7 +41,7 @@ const spotifyToolBar = props => {
   let songDuration = src.duration;
 
   const updateSongTime = () => {
-    setSongTime(prevTime => {
+    setSongTime((prevTime) => {
       if (prevTime > songDuration) {
         if (index === lastIndex) setIsPlaying(false);
         handleNext();
@@ -67,14 +67,14 @@ const spotifyToolBar = props => {
     mute < 0 ? muteVol() : unmuteVol();
   };
 
-  const updateVolume = volumePercent => {
+  const updateVolume = (volumePercent) => {
     if (mute >= 0) unmuteVol();
     let vol = 0.01 * volumePercent;
     source.volume = vol;
     setVolume(vol);
   };
 
-  const updateSongPercent = songPercent => {
+  const updateSongPercent = (songPercent) => {
     pauseSong();
     setSongTime(0.01 * songPercent * songDuration);
   };
@@ -83,7 +83,7 @@ const spotifyToolBar = props => {
     if (songTime >= songDuration) {
       if (index === lastIndex) {
         setSongTime(0);
-      };
+      }
       handleNext();
     }
     source.volume = volume;
@@ -150,4 +150,4 @@ const spotifyToolBar = props => {
   );
 };
 
-export default spotifyToolBar;
+export default SpotifyToolBar;

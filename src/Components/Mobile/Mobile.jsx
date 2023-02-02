@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import "./Mobile.scss";
 import ME from "../../content/meContent";
 
-const mobile = () => {
+const Mobile = () => {
   useEffect(() => {
     let mobileContainer = document.getElementById("mobileContainer");
     setTimeout(() => (mobileContainer.style.width = "calc(100% - 40px)"), 200);
     setTimeout(() => {
       mobileContainer.style.transition = "all 1s ease";
-      mobileContainer.style.height = "calc(100% - 80px)"
+      mobileContainer.style.height = "calc(100% - 80px)";
     }, 700);
   }, []);
   let aboutMe = ME[0].content;
@@ -26,4 +26,4 @@ const mobile = () => {
   );
 };
 
-export default mobile;
+export default Mobile;

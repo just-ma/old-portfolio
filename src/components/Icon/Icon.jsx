@@ -4,7 +4,7 @@ import "./Icon.scss";
 import { selectWindow } from "../../utils";
 import Window from "../Window/Window";
 
-const icon = props => {
+const Icon = (props) => {
   const [windowDOM, setWindowDOM] = useState(null);
   const [windowOpen, setWindowOpen] = useState(false);
 
@@ -23,13 +23,13 @@ const icon = props => {
           break;
       }
     }
-  }, [props.loading])
+  }, [props.loading]);
 
   let { id, title, type, source, multiSource } = props;
   let lastClick = 0;
   let titleClasses = ["icon__title"];
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.stopPropagation();
     let currClick = Date.now();
     if (currClick - lastClick < 500) openWindow();
@@ -69,9 +69,7 @@ const icon = props => {
 
   return (
     <div className="icon" onClick={handleClick}>
-      <div className={"icon__thumbnail -" + type}>
-        {renderIcon()}
-      </div>
+      <div className={"icon__thumbnail -" + type}>{renderIcon()}</div>
       <div className={titleClasses.join(" ")}>{title}</div>
       {windowDOM
         ? ReactDOM.createPortal(
@@ -83,4 +81,4 @@ const icon = props => {
   );
 };
 
-export default icon;
+export default Icon;

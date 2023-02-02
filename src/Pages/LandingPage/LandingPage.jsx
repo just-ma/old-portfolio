@@ -9,7 +9,7 @@ import { FILE_TYPE } from "../../constants";
 import RECYCLE from "../../content/recycleContent";
 import { windowComplete } from "../../utils";
 
-const landingPage = () => {
+const LandingPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const landingPage = () => {
   );
 };
 
-export default landingPage;
+export default LandingPage;
